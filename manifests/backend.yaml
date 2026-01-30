@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/yaysin/guestbook-backend:latest
+        image: ghcr.io/yaysin/guestbook-backend:sha-52f71b505779a99ded46286e714a150ec0109eeb
         ports:
         - containerPort: 8080
         envFrom:

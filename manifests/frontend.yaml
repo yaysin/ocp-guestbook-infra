@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/yaysin/guestbook-frontend:latest
+        image: ghcr.io/yaysin/guestbook-frontend:sha-52f71b505779a99ded46286e714a150ec0109eeb
         ports:
         - containerPort: 8080
 ---
