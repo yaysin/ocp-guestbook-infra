@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/yaysin/ocp-guestbook-infra.git
+    targetRevision: main
+    path: manifests
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: yaysin-dev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
